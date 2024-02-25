@@ -1,5 +1,5 @@
 
-# docker run --net host --name wg-easy -e LANG=zhs -e PASSWORD=Jdzcjdzc1.Jdzcjdzc1. -e WG_DEFAULT_ADDRESS=10.8.0.x -e WG_DEFAULT_ADDRESS6=fdcc:ad94:bacf:61a4::cafe:x -e WG_DEFAULT_DNS=10.0.0.1 -e WG_HOST=vpn.ipv4.llsss.top -e WG_PORT=51820 -h wg-easy --privileged --rm -ti --mount type=bind,source=/DATA/AppData/wg-easy,target=/etc/wireguard registry.cn-hangzhou.aliyuncs.com/jajabjbj/wg-easy:ipv6
+# docker run --net host --name wg-easy -e LANG=zhs -e PASSWORD=Jdzcjdzc1.Jdzcjdzc1. -e WG_DEFAULT_ADDRESS=10.8.0.x -e WG_DEFAULT_ADDRESS6=fdcc:ad94:bacf:61a4::cafe:x -e WG_DEFAULT_DNS=10.0.0.1 -e WG_HOST=vpn.ipv4.llsss.top -e WG_PORT=51820 -h wg-easy --privileged --rm -ti --mount type=bind,source=/DATA/AppData/wg-easy,target=/etc/wireguard registry.cn-hangzhou.aliyuncs.com/jajabjbj/wg-easy:ipv6-2
 
 name: wg-easy
 services:
@@ -15,7 +15,7 @@ services:
       - WG_HOST=vpn.ipv4.llsss.top
       - WG_PORT=51820
     hostname: wg-easy
-    image: registry.cn-hangzhou.aliyuncs.com/jajabjbj/wg-easy:ipv6
+    image: registry.cn-hangzhou.aliyuncs.com/jajabjbj/wg-easy:ipv6-2
     ports:
       - target: 51821
         published: "51821"

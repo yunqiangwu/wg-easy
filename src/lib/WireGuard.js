@@ -104,10 +104,10 @@ module.exports = class WireGuard {
 PrivateKey = ${config.server.privateKey}
 Address = ${config.server.address}/24, ${config.server.address6}/120
 ListenPort = 51820
-PreUp = ${WG_PRE_UP}
-PostUp = ${WG_POST_UP}
-PreDown = ${WG_PRE_DOWN}
-PostDown = ${WG_POST_DOWN}
+PreUp = ${WG_PRE_UP || ''}
+PostUp = ${WG_POST_UP || ''}
+PreDown = ${WG_PRE_DOWN || ''}
+PostDown = ${WG_POST_DOWN || ''}
 `;
 
     for (const [clientId, client] of Object.entries(config.clients)) {
